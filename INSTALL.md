@@ -46,12 +46,7 @@ INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
     e) make all or open buildYourStory.sln file in visual studio and compile server application
     f) Set config.txt folder path to app caffeModel folder 
    
-        
-4) Build BuildYourStory server application
 
-
-   a)  git clone https://github.com/keplerlab/buildYourStoryServer.git
-   
 5) Run server 
 
     ./neuralCreativityServer 
