@@ -2,7 +2,7 @@
 Hand drawn sketch recognition server using Deep Neural Networks
 
 
-INSTALLATION Neural Creativity SKETCH RECOGNITION SERVER
+INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
 
 1) Install CMake
 2) Install OpenCV
@@ -37,7 +37,6 @@ INSTALLATION Neural Creativity SKETCH RECOGNITION SERVER
         
 3) Build BuildYourStory server application
 
-
    a)  git clone https://github.com/keplerlab/buildYourStoryServer.git
    b)  cd buildYourStoryServer/server
    c)  mkdir build ; cd build
@@ -52,7 +51,6 @@ INSTALLATION Neural Creativity SKETCH RECOGNITION SERVER
     Invoke dummyClient as 
     ./dummyClient yourImage.png 
     
-   
    
    
 SKETCH RECOGNITION TRAINING   
