@@ -35,7 +35,7 @@ INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
     a) Set QT_DIR to /usr/local/opt/qt5 for MacOSX 
     Note QT is needed for using Websocket libarary for socket communication 
         
-3) Build BuildYourStory server application
+4) Build BuildYourStory server application
 
 
    a)  git clone https://github.com/keplerlab/buildYourStoryServer.git
@@ -45,7 +45,7 @@ INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
    e)  make all or open buildYourStory.sln file in visual studio and compile server application
    f)  Set config.txt folder path to app caffeModel folder 
    
-4) Run server 
+5) Run server 
 
     ./neuralCreativityServer 
     for checking output use browser to send base64 encoded image in json format or use 
