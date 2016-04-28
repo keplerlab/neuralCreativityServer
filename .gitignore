@@ -29,7 +29,7 @@
 
 #build and saveData folders 
 server/build
-server/saveData
+#server/saveData
 
 #hidden files 
 .*

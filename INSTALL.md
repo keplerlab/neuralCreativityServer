@@ -2,7 +2,7 @@
 Hand drawn sketch recognition server using Deep Neural Networks
 
 
-INSTALLATION SKETCH RECOGNITION SERVER
+INSTALLATION Neural Creativity SKETCH RECOGNITION SERVER
 
 1) Install CMake
 2) Install OpenCV
@@ -38,9 +38,13 @@ INSTALLATION SKETCH RECOGNITION SERVER
    c)  mkdir build ; cd build
    d)  cmake -D CMAKE_BUILD_TYPE=Release ..
    e)  make all or open buildYourStory.sln file in visual studio and compile server application
-   f)  Set config.txt 
-   g)  Run bysServer from command prompt
+   f)  Set config.txt folder path to app caffeModel folder 
    
+4) Run server ./neuralCreativityServer 
+    for checking output use browser to send base64 encoded image in json format or use 
+    Invoke dummyClient as 
+    ./dummyClient yourImage.png 
+    
    
    
    
@@ -48,11 +52,11 @@ SKETCH RECOGNITION TRAINING
 
 1) Download training data from 
 Initial training data can be obtained using TU Berlin sketch dataset 
-"How do humans sketch objects?." ACM Trans. Graph. 31.4 (2012): 44-1.Eitz, Mathias, James Hays, and Marc Alexa. 
+<i>"How do humans sketch objects?." ACM Trans. Graph. 31.4 (2012): 44-1.Eitz, Mathias, James Hays, and Marc Alexa. 
 (available under Creative Commons Attribution 4.0 International License.) 
-Link http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/sketches_png.zip
+Link http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/sketches_png.zip </i>
 
-2) 
+
 
 
 
