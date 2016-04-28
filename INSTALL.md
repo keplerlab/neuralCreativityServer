@@ -58,11 +58,11 @@ INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
    
 SKETCH RECOGNITION TRAINING   
 
-    1) Download training data from 
-    Initial training data can be obtained using TU Berlin sketch dataset 
-    <i>"How do humans sketch objects?." ACM Trans. Graph. 31.4 (2012): 44-1.Eitz, Mathias, James Hays, and Marc Alexa. 
-    (available under Creative Commons Attribution 4.0 International License.) 
-    Link http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/sketches_png.zip </i>
+1) Download training data from 
+    wget http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/sketches_png.zip 
+Initial training data obtained from TU Berlin sketch dataset 
+<i>"How do humans sketch objects?." ACM Trans. Graph. 31.4 (2012): 44-1.Eitz, Mathias, James Hays, and Marc Alexa. 
+(available under Creative Commons Attribution 4.0 International License.) </i>
 
 
 
