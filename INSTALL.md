@@ -6,26 +6,25 @@ INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
 
 1) Install CMake
 2) Install OpenCV
-    Checkout latest 3.0 OpenCV with OpenCV_Contrib and build from source 
-        
-    a) Start cmake-gui
-    b) clone or download zip of OpenCV and OpenCV_contrib
+
+
+    a) clone or download zip of OpenCV and OpenCV_contrib
         cd ~/<my_working_directory>
         git clone https://github.com/Itseez/opencv.git
         git clone https://github.com/Itseez/opencv_contrib.git
     
-    c) Make a directory where you want to build opencv 
+    b) Make a directory where you want to build opencv 
         cd ~/opencv
         mkdir build
         cd build
-    d) Run cmake configure 
+    c) Run cmake configure 
         Set OPENCV_EXTRA_MODULES_PATH=opencv_root/opencv_contrib/modules
         Again run configure and generate 
         select appropriate generator (Tested on visual studio in windows and MacOSX)
-    c) Compile project ( make all , make install for linux and mac)
+    d) Compile project ( make all , make install for linux and mac)
         (run install project in OpenCV.sln project in windows)
-    d) Set OpenCV_DIR envirment variable to path to opencv install folder 
-    e) Set Path variable where opencv is installed 
+    e) Set OpenCV_DIR envirment variable to path to opencv install folder 
+    f) Set Path variable where opencv is installed 
     
 3) Install QT 
 
