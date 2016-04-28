@@ -5,6 +5,7 @@ Hand drawn sketch recognition server using Deep Neural Networks
 INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
 
 1) Install CMake
+
 2) Install OpenCV
 
 
