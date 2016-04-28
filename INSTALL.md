@@ -35,15 +35,22 @@ INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
     a) Set QT_DIR to /usr/local/opt/qt5 for MacOSX 
     Note QT is needed for using Websocket libarary for socket communication 
         
+4) Build Neural Creativity server
+
+
+    a) git clone https://github.com/keplerlab/buildYourStoryServer.git
+    or in MacOSX brew install qt5 
+    b) cd buildYourStoryServer/server
+    c) mkdir build ; cd build
+    d) cmake -D CMAKE_BUILD_TYPE=Release ..
+    e) make all or open buildYourStory.sln file in visual studio and compile server application
+    f) Set config.txt folder path to app caffeModel folder 
+   
+        
 4) Build BuildYourStory server application
 
 
    a)  git clone https://github.com/keplerlab/buildYourStoryServer.git
-   b)  cd buildYourStoryServer/server
-   c)  mkdir build ; cd build
-   d)  cmake -D CMAKE_BUILD_TYPE=Release ..
-   e)  make all or open buildYourStory.sln file in visual studio and compile server application
-   f)  Set config.txt folder path to app caffeModel folder 
    
 5) Run server 
 
@@ -56,11 +63,11 @@ INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
    
 SKETCH RECOGNITION TRAINING   
 
-1) Download training data from 
-Initial training data can be obtained using TU Berlin sketch dataset 
-<i>"How do humans sketch objects?." ACM Trans. Graph. 31.4 (2012): 44-1.Eitz, Mathias, James Hays, and Marc Alexa. 
-(available under Creative Commons Attribution 4.0 International License.) 
-Link http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/sketches_png.zip </i>
+    1) Download training data from 
+    Initial training data can be obtained using TU Berlin sketch dataset 
+    <i>"How do humans sketch objects?." ACM Trans. Graph. 31.4 (2012): 44-1.Eitz, Mathias, James Hays, and Marc Alexa. 
+    (available under Creative Commons Attribution 4.0 International License.) 
+    Link http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/sketches_png.zip </i>
 
 
 
