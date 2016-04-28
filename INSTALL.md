@@ -37,6 +37,7 @@ INSTALLATION NEURAL CREATIVITY SKETCH RECOGNITION SERVER
         
 3) Build BuildYourStory server application
 
+
    a)  git clone https://github.com/keplerlab/buildYourStoryServer.git
    b)  cd buildYourStoryServer/server
    c)  mkdir build ; cd build
