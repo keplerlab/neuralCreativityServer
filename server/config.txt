@@ -1,5 +1,4 @@
-modelFolderName ./server/caffeModel/
-modelBinName sketchANet_full_iter_10000.caffemodel
-saveFolderName ./saveData/
-
+modelFolderName ../caffeModel/
+modelBinName sketchANet_full_iter_7500.caffemodel
+saveFolderName ../saveData/
 
