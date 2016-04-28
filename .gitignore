@@ -26,3 +26,12 @@
 *.exe
 *.out
 *.app
+
+#build and saveData folders 
+server/build
+server/saveData
+
+#hidden files 
+.*
+!/.gitignore
+
