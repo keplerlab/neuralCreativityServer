@@ -1,5 +1,5 @@
 
-#include "socketclient.h"
+#include "socketClient.h"
 #include <QtCore/QDebug>
 
 #include "json/json.h"

@@ -22,7 +22,7 @@ using namespace std;
 #include "json/json.h"
 
 
-#include "socketserver.h"
+#include "socketServer.h"
 
 #include "helper.h"
 

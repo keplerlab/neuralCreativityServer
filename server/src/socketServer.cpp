@@ -1,5 +1,5 @@
 
-#include "socketserver.h"
+#include "socketServer.h"
 #include "QtWebSockets/qwebsocketserver.h"
 #include "QtWebSockets/qwebsocket.h"
 #include <QtCore/QDebug>
