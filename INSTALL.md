@@ -7,6 +7,7 @@ INSTALLATION Neural Creativity SKETCH RECOGNITION SERVER
 1) Install CMake
 2) Install OpenCV
     Checkout latest 3.0 OpenCV with OpenCV_Contrib and build from source 
+        
     a) Start cmake-gui
     b) clone or download zip of OpenCV and OpenCV_contrib
         cd ~/<my_working_directory>
@@ -27,12 +28,16 @@ INSTALLATION Neural Creativity SKETCH RECOGNITION SERVER
     e) Set Path variable where opencv is installed 
     
 3) Install QT 
+
+
     Download and install Install QT_SDK from https://www.qt.io/download/
     or in MacOSX brew install qt5 
     a) Set QT_DIR to /usr/local/opt/qt5 for MacOSX 
     Note QT is needed for using Websocket libarary for socket communication 
         
 3) Build BuildYourStory server application
+
+
    a)  git clone https://github.com/keplerlab/buildYourStoryServer.git
    b)  cd buildYourStoryServer/server
    c)  mkdir build ; cd build
@@ -40,7 +45,9 @@ INSTALLATION Neural Creativity SKETCH RECOGNITION SERVER
    e)  make all or open buildYourStory.sln file in visual studio and compile server application
    f)  Set config.txt folder path to app caffeModel folder 
    
-4) Run server ./neuralCreativityServer 
+4) Run server 
+
+    ./neuralCreativityServer 
     for checking output use browser to send base64 encoded image in json format or use 
     Invoke dummyClient as 
     ./dummyClient yourImage.png 
