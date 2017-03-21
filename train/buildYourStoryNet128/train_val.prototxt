@@ -1,4 +1,4 @@
-name: “sketchANet”
+name: "sketchANet"
 layer {
   name: "data"
   type: "Data"
