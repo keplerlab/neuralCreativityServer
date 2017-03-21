@@ -1,4 +1,4 @@
-name: "buildYourStoryNet"
+name: "sketchANet"
 input: "data"
 input_shape {
   dim: 1

@@ -320,7 +320,10 @@ int call_from_thread(SocketServer* server)
     importer.release();                     //We don't need importer anymore
     //! [Initialize network]
 
-    dnn::Blob inputBlob = dnn::Blob(img2);   //Convert Mat to dnn::Blob image batch
+      
+    //Convert Mat to dnn::Blob image batch
+    dnn::Blob inputBlob = dnn::Blob::fromImages(img2);
+    //dnn::Blob inputBlob = dnn::Blob(img2);  // Old method in opencv 3.0 
     //! [Prepare blob]
 
     //! [Set input blob]

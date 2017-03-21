@@ -78,7 +78,7 @@ void SocketClient::onDisconnected()
 
 void SocketClient::onTextMessageReceivedServer(QString message)
 {
-    qDebug() << "Message received From server :" << message;
+    //qDebug() << "Message received From server :" << message;
 
 	Json::Value root;   // will contains the root value after parsing.
 	Json::Reader reader;
@@ -92,6 +92,10 @@ void SocketClient::onTextMessageReceivedServer(QString message)
 		std::cerr << reader.getFormattedErrorMessages() << endl;
 		return;
 	}
+    else
+    {
+        cout << "Result: \n" << root.toStyledString() << endl ; 
+    }
     
     
 	
