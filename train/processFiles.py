@@ -164,8 +164,8 @@ testSet = []
 # bisect between traininng , valdiation and test set // total should be 100 
 
 # writing train and val files ratio 
-trainingPercent = 85
-validationPercent = 10 
+trainingPercent = 75
+validationPercent = 20 
 testPercent = 5
 print "dividing between train , validation and test set in Ratio of 85 10 5 ....\n\n"
 
