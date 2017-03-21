@@ -16,8 +16,8 @@ doTranslate = bool(1)
 doRandomRotate = bool(1)
 
 allDirs = []
-pngDir = "png"
-pngTargetDir = "png2"
+pngDir = "training_data_neural_creativity"
+pngTargetDir = "modified_data"
 
 
 print "getting all selected categories .. \n\n"
@@ -66,9 +66,9 @@ for idx,iDir in enumerate(allDirs):
                     img = cv2.dilate(img,kernel,iterations = 1)
                 #print  str(img.shape) + "\n";
 
-                if not os.path.exists(os.path.join(png2Dir,iDir)):
-                    os.makedirs(os.path.join(png2Dir,iDir))
-                saveFileName = os.path.join(png2Dir,iDir,file)
+                if not os.path.exists(os.path.join(pngTargetDir,iDir)):
+                    os.makedirs(os.path.join(pngTargetDir,iDir))
+                saveFileName = os.path.join(pngTargetDir,iDir,file)
                 
                 #print saveFileName 
                 resized_img = cv2.resize(img, (128, 128))
@@ -127,7 +127,7 @@ for idx,iDir in enumerate(allDirs):
                 # check contour bounding box 
                 if doFlip:
                     flipName = "flipped_" + file
-                    saveFileNameFlipped = os.path.join(png2Dir,iDir,flipName)
+                    saveFileNameFlipped = os.path.join(pngTargetDir,iDir,flipName)
                     #print saveFileNameFlipped
                     flippedImage=cv2.flip(resized_img,1)
                     cv2.imwrite(saveFileNameFlipped,flippedImage)
@@ -138,7 +138,7 @@ for idx,iDir in enumerate(allDirs):
                 #cv2.imshow("flipeedImage",flippedImage)
                 #cv2.waitKey(10000)
                 
-                allImagesListFile.write( os.path.join(png2Dir,iDir,file) + " " + str(idx) + "\n")
+                allImagesListFile.write( os.path.join(pngTargetDir,iDir,file) + " " + str(idx) + "\n")
                     
             else:
                 allImagesListFile.write( os.path.join(pngDir,iDir,file) + " " + str(idx) + "\n")
@@ -176,7 +176,7 @@ allFileNo = 0
 for iDir in allDirs:
     # get all files list in directory
     if transformImages:
-        filesListInDir = listdir(os.path.join(png2Dir,iDir))
+        filesListInDir = listdir(os.path.join(pngTargetDir,iDir))
     else:
         filesListInDir = listdir(os.path.join(pngDir,iDir))
     numOfFiles = len(filesListInDir)    
@@ -186,25 +186,25 @@ for iDir in allDirs:
     #iterate over files and divide between training val and test set
     for jdx,file in enumerate(filesListInDir):
         if transformImages:
-            imageFile = os.path.join(png2Dir,iDir,file)
+            imageFile = os.path.join(pngTargetDir,iDir,file)
         else:
             imageFile = os.path.join(pngDir,iDir,file)
         if os.path.isfile(imageFile) and imageFile.endswith(".png"):
             if(jdx < (trainingPercent * numOfFiles)/100): 
                 if transformImages:
-                    trainingSet.append( os.path.join(png2Dir,iDir,file) + " " + str(indexOfClasses[iDir]) + "\n")
+                    trainingSet.append( os.path.join(pngTargetDir,iDir,file) + " " + str(indexOfClasses[iDir]) + "\n")
                 else:
                     trainingSet.append( os.path.join(pngDir,iDir,file) + " " + str(indexOfClasses[iDir]) + "\n")
                 #print "first: " + str(jdx) 
             elif(jdx < ((trainingPercent+validationPercent) * numOfFiles)/100 ):
                 if transformImages:
-                    validationSet.append( os.path.join(png2Dir,iDir,file) + " " + str(indexOfClasses[iDir]) + "\n")
+                    validationSet.append( os.path.join(pngTargetDir,iDir,file) + " " + str(indexOfClasses[iDir]) + "\n")
                 else:
                     validationSet.append( os.path.join(pngDir,iDir,file) + " " + str(indexOfClasses[iDir]) + "\n")
                 #print "second : " + str(jdx) 
             else:
                 if transformImages:
-                    testSet.append( os.path.join(png2Dir,iDir,file) + " " + str(indexOfClasses[iDir]) + "\n")
+                    testSet.append( os.path.join(pngTargetDir,iDir,file) + " " + str(indexOfClasses[iDir]) + "\n")
                 else:
                     testSet.append( os.path.join(pngDir,iDir,file) + " " + str(indexOfClasses[iDir]) + "\n")
                 #print "last: " + str(jdx)
@@ -243,8 +243,8 @@ imageFilesTrain.close()
 imageFilesValidation.close()  
 imageFilesTest.close()
 
-trainSetDir = "./set18apr/"
-archiveFileName = "training_set_archive128_20apr.zip"
+trainSetDir = "./train_set/"
+archiveFileName = "training_set.zip"
 call(["rm","-rf", trainSetDir])
 call(["mkdir",trainSetDir])
 # Make lmdb file from training validation and test set 
